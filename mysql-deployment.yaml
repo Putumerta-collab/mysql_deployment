@@ -17,7 +17,7 @@ spec:
         image: mysql:5.7
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: ""
+          value: "root"
         - name: MYSQL_DATABASE
           value: "Smart_temple"
         - name: MYSQL_USER
