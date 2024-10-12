@@ -19,7 +19,7 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           value: ""
         - name: MYSQL_DATABASE
-          value: "Smarttemple"
+          value: "Smart_temple"
         - name: MYSQL_USER
           value: "Admin"
         - name: MYSQL_PASSWORD
