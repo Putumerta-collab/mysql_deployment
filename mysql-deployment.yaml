@@ -17,12 +17,19 @@ spec:
         image: mysql:5.7
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "rootpassword"
+          value: ""
         - name: MYSQL_DATABASE
-          value: "your_database"
+          value: "Smarttemple"
         - name: MYSQL_USER
-          value: "your_user"
+          value: "Admin"
         - name: MYSQL_PASSWORD
-          value: "your_password"
+          value: "1234"
+        volumeMounts:
+        - name: mysql-storage
+          mountPath: /var/lib/mysql
         ports:
         - containerPort: 3306
+      volumes:
+      - name: mysql-storage
+        persistentVolumeClaim:
+          claimName: mysql-pvc
