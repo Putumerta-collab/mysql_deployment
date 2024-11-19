@@ -16,10 +16,10 @@ pipeline {
             steps {
                 withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
                     sh '''
-                    kubectl --kubeconfig=$KUBECONFIG apply -f mysql-deployment.yaml
-                    kubectl --kubeconfig=$KUBECONFIG apply -f mysql-pv.yaml
+                   
                     kubectl --kubeconfig=$KUBECONFIG apply -f mysql-pvc.yaml
-                    kubectl --kubeconfig=$KUBECONFIG apply -f mysql-service.yaml
+                    kubectl --kubeconfig=$KUBECONFIG apply -f mysql-pv.yaml
+                   
                     '''
                 }
             }
